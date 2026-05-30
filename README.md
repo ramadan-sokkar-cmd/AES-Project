@@ -56,3 +56,7 @@ Prerequisites
 
 
 ![Visitors](https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=badge&countColor=%230d76a8&style=flat)
+<div align="center">
+  <h2>👀 Visitors</h2>
+  <img src="https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=%23000000&countColor=%230d76a8&style=flat" alt="Visitors">
+</div>
