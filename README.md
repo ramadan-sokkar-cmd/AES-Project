@@ -52,3 +52,7 @@ Prerequisites
 * Abdelrahman Mohamed Hamad - Lead Digital Design & RTL Engineer
 * Ramadan Mohammed Sokkar - RTL Design Engineer & FPGA Integration
 * Abanoub Sabry - RTL Design 
+<br>
+
+
+![Visitors](https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=%23000000&countColor=%230d76a8&style=flat)
