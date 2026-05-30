@@ -61,5 +61,5 @@ Prerequisites
 
 
 <div align="center">
-  <img src="https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=badge&countColor=%230d76a8&style=flat" alt="Visitors" width="150">
+  <img src="https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=badge&countColor=%230d76a8&style=flat" alt="Visitors" width="100">
 </div>
