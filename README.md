@@ -13,7 +13,7 @@ Unlike traditional iterative AES cores that suffer from high latency and deplete
 
 ## ✨ Key Features
 * **Standard Compliant:** Implements AES-128 encryption algorithm (FIPS-197).
-* **High Throughput:** 5-stage unrolled spatial pipeline achieving up to **12.8 Gbps** continuous throughput (at 100 MHz).
+* **High Throughput:** 5-stage unrolled spatial pipeline achieving up to **30 Gbps** continuous throughput (at 250 MHz).
 * **Zero-BRAM S-Box:** Employs an area-optimized S-Box using mathematical GF logic instead of memory-heavy Look-Up Tables.
 * **Design Space Exploration (DSE):** Provides both `GF-based` (Area optimized) and `LUT-based` (Speed optimized) S-Boxes.
 * **AXI4-Lite Integration:** Wrapped in an AXI4-Lite slave interface (`myi_axi4_lite_ip_slave`) for seamless Hardware/Software co-design with Zynq UltraScale+ Processing System (PS).
