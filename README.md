@@ -16,7 +16,7 @@ Unlike traditional iterative AES cores that suffer from high latency and deplete
 * **High Throughput:** 5-stage unrolled spatial pipeline achieving up to **30 Gbps** continuous throughput (at 250 MHz).
 * **Zero-BRAM S-Box:** Employs an area-optimized S-Box using mathematical GF logic instead of memory-heavy Look-Up Tables.
 * **Design Space Exploration (DSE):** Provides both `GF-based` (Area optimized) and `LUT-based` (Speed optimized) S-Boxes.
-* **AXI4-Lite Integration:** Wrapped in an AXI4-Lite slave interface (`myi_axi4_lite_ip_slave`) for seamless Hardware/Software co-design with Zynq UltraScale+ Processing System (PS).
+* **AXI4-Lite Integration:** Wrapped in an AXI4-Lite slave interface (`myip_test5_v1_0`) for seamless Hardware/Software co-design with Zynq UltraScale+ Processing System (PS).
 * **Zero-Delay Key Expansion:** Sequential Key Expansion unit pre-calculates and registers subkeys locally to avoid distribution delays.
 
 ## 📂 Repository Structure
@@ -25,7 +25,7 @@ Cypher-X-AES128-Accelerator/
 ├── docs/                      # Architecture diagrams, presentations, and documentation
 ├── rtl/                       # Verilog source files for the AES core
 │   ├── aes_top.v              # Top-level AES pipeline wrapper
-│   ├── myi_axi4_lite_... .v   # AXI4-Lite interface wrapper
+│   ├── myip_test5_v1_0.v   # AXI4-Lite interface wrapper
 │   ├── aes_stage.v            # Structural pipeline stage (groups 2 rounds)
 │   ├── aes_round.v            # Standard encryption round logic
 │   ├── sub_bytes.v            # SubBytes wrapper
