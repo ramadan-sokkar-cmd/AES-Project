@@ -37,3 +37,18 @@ Cypher-X-AES128-Accelerator/
 │   └── u_key_expansion_seq2.v # Key expansion unit
 ├── tb/                        # Testbenches for module and top-level verification
 └── README.md                  # Project overview and instructions
+```
+## ⚙️ Architecture details
+The data enters via the AXI4-Lite interface from the Zynq processor into aes_top.v. It passes through the initial addRoundKey and cascades continuously through 5 pipeline stages (aes_stage.v). Each stage processes 2 AES rounds in a single clock cycle. A parallel Valid-Pipe synchronizes the 5-cycle latency, outputting valid ciphertext continuously without stalling the industrial control loop.
+
+(Note: You can view the full block diagram in the docs/ Cypher-X Architecture).
+
+## 🚀 Getting Started & Simulation
+Prerequisites
+Simulator: Siemens QuestaSim / ModelSim OR Xilinx Vivado Simulator.
+Synthesis Tool: Xilinx Vivado (Targeting AMD Kria KV260 ).
+
+## 👥 Team List:
+Abdelrahman Mohamed Hamad - Lead Digital Design & RTL Engineer
+Ramadan Mohammed Sokkar - RTL Design Engineer & FPGA Integration
+Abanoub Sabry - RTL Design 
