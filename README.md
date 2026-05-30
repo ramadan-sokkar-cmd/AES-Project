@@ -55,4 +55,4 @@ Prerequisites
 <br>
 
 
-![Visitors](https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=%23000000&countColor=%230d76a8&style=flat)
+![Visitors](https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=badge&countColor=%230d76a8&style=flat)
