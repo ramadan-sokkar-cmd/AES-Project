@@ -5,7 +5,7 @@ Hardware/software co-design of pipelined AES-128 using Zynq SoC for IIoT gateway
 
   ![Status](https://img.shields.io/badge/Status-Active-success)
   ![Platform](https://img.shields.io/badge/Platform-Zynq%20SoC%20%2F%20FPGA-blue)
-  ![Language](https://img.shields.io/badge/Language-Verilog%20HDL-orange)
+  ![Language](https://img.shields.io/badge/Language-Verilog%20HDL-orange)ئ
   ![Target](https://img.shields.io/badge/Target-IIoT%20Security-red)
 </div>
 
