@@ -1,10 +1,11 @@
 # AES-Project
 Hardware/software co-design of pipelined AES-128 using Zynq SoC for IIoT gateways
 # Cypher-X: Pipelined AES-128 Hardware Accelerator for IIoT
-
+<div align="center">
 ![Hardware/Software Co-Design](https://img.shields.io/badge/Architecture-Hardware%2FSoftware%20Co--Design-blue)
 ![Language](https://img.shields.io/badge/Language-Verilog-orange)
 ![Platform](https://img.shields.io/badge/Platform-Zynq%20SoC%20%2F%20FPGA-lightgrey)
+</div>
 
 ## 📌 Project Overview
 **Cypher-X** (Team SMC26-24) is a high-throughput, 5-stage spatial pipelined AES-128 hardware accelerator specifically engineered for Industrial IoT (IIoT) edge gateways and smart factory control loops. 
@@ -55,8 +56,6 @@ Prerequisites
 <br>
 
 
-![Visitors](https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=badge&countColor=%230d76a8&style=flat)
 <div align="center">
-  <h2>👀 Visitors</h2>
-  <img src="https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=%23000000&countColor=%230d76a8&style=flat" alt="Visitors">
+  <img src="https://api.visitorbadge.io/api/visitors?path=ramadan-sokkar-cmd/AES-Project&label=VISITORS&labelColor=badge&countColor=%230d76a8&style=flat" alt="Visitors">
 </div>
