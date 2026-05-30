@@ -45,10 +45,10 @@ The data enters via the AXI4-Lite interface from the Zynq processor into aes_top
 
 ## 🚀 Getting Started & Simulation
 Prerequisites
-Simulator: Siemens QuestaSim / ModelSim OR Xilinx Vivado Simulator.
-Synthesis Tool: Xilinx Vivado (Targeting AMD Kria KV260 ).
+* Simulator: Siemens QuestaSim / ModelSim OR Xilinx Vivado Simulator.
+* Synthesis Tool: Xilinx Vivado (Targeting AMD Kria KV260 ).
 
 ## 👥 Team List:
-Abdelrahman Mohamed Hamad - Lead Digital Design & RTL Engineer
-Ramadan Mohammed Sokkar - RTL Design Engineer & FPGA Integration
-Abanoub Sabry - RTL Design 
+* Abdelrahman Mohamed Hamad - Lead Digital Design & RTL Engineer
+* Ramadan Mohammed Sokkar - RTL Design Engineer & FPGA Integration
+* Abanoub Sabry - RTL Design 
