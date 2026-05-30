@@ -25,7 +25,7 @@ Cypher-X-AES128-Accelerator/
 ├── docs/                      # Architecture diagrams, presentations, and documentation
 ├── rtl/                       # Verilog source files for the AES core
 │   ├── aes_top.v              # Top-level AES pipeline wrapper
-│   ├── myip_test5_v1_0.v   # AXI4-Lite interface wrapper
+│   ├── myip_test5_v1_0.v      # AXI4-Lite interface wrapper
 │   ├── aes_stage.v            # Structural pipeline stage (groups 2 rounds)
 │   ├── aes_round.v            # Standard encryption round logic
 │   ├── sub_bytes.v            # SubBytes wrapper
