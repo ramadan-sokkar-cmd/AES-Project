@@ -51,6 +51,7 @@ Cypher-X-AES128-Accelerator/
 │   │   └── gf_based/              # Timing & Utilization reports for GF S-Box
 │   └── soc_design/            # (WIP) Tcl script for regenerating Zynq PS-PL Block Design 
 └── README.md                  # Project overview and instructions
+```
 ## ⚙️ Architecture details
 The data enters via the AXI4-Lite interface from the Zynq processor into aes_top.v. It passes through the initial addRoundKey and cascades continuously through 5 pipeline stages (aes_stage.v). Each stage processes 2 AES rounds in a single clock cycle. A parallel Valid-Pipe synchronizes the 5-cycle latency, outputting valid ciphertext continuously without stalling the industrial control loop.
 
