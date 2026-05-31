@@ -27,7 +27,10 @@ Unlike traditional iterative AES cores that suffer from high latency and deplete
 ## 📂 Repository Structure
 ```text
 Cypher-X-AES128-Accelerator/
-├── docs/                      # Architecture diagrams, presentations, and documentation
+├── docs/                      # Comprehensive project documentation
+│   ├── AES Presentation.pptx      # Pitch deck and high-level overview
+│   ├── AES hardware core_391.pdf  # Detailed design document draft
+│   └── Cypher-X Architecture.pdf  # High-level architecture block diagram
 ├── rtl/                       # Verilog source files for the AES core
 │   ├── aes_top.v              # Top-level AES pipeline wrapper
 │   ├── myip_test5_v1_0.v      # AXI4-Lite interface wrapper
@@ -41,8 +44,13 @@ Cypher-X-AES128-Accelerator/
 │   ├── addRoundKey.v          # Key mixing logic
 │   └── u_key_expansion_seq2.v # Key expansion unit
 ├── tb/                        # Testbenches for module and top-level verification
+├── scripts/                   # Evaluation environments and configuration files
+│   ├── standalone_benchmark/  # Environment for extreme performance testing
+│   │   ├── aes_result.xpr         # Vivado project for maximum throughput testing
+│   │   ├── lut_based/             # Timing & Utilization reports for LUT S-Box
+│   │   └── gf_based/              # Timing & Utilization reports for GF S-Box
+│   └── soc_design/            # (WIP) Tcl script for regenerating Zynq PS-PL Block Design 
 └── README.md                  # Project overview and instructions
-```
 ## ⚙️ Architecture details
 The data enters via the AXI4-Lite interface from the Zynq processor into aes_top.v. It passes through the initial addRoundKey and cascades continuously through 5 pipeline stages (aes_stage.v). Each stage processes 2 AES rounds in a single clock cycle. A parallel Valid-Pipe synchronizes the 5-cycle latency, outputting valid ciphertext continuously without stalling the industrial control loop.
 
