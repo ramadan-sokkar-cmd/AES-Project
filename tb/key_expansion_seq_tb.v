@@ -15,7 +15,7 @@ reg  [1280-1:0] golden128;
 reg rst_n;
 wire key_ready_128;
 wire key_ready_192;
-wire key_ready_256key_ready_256;
+wire key_ready_256;
 u_keyExpansion_seq2 #(.Nk(4)) dut128 (
     .clk(clk),
     .KEY_in(key128),
