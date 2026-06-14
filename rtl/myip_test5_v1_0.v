@@ -15,11 +15,6 @@
 	)
 	(
 		// Users to add ports here
-//		output wire [127:0] data_in,key_in,
-//                input wire [127:0] data_out,
-//                input wire valid_out,
-//				input wire key_ready,//new
-//                output wire valid_in,
 
 		// User ports ends
 		// Do not modify the ports beyond this line
@@ -49,57 +44,61 @@
 		input wire  s00_axi_rready
 		
 	);
-			wire [127:0] data_in,key_in;
-                 wire [127:0] data_out;
-                wire valid_out;
-				 wire key_ready;//new
-                wire valid_in;
+		wire [127:0] data_in,key_in;
+		wire [127:0] data_out;
+		wire valid_out;
+		wire key_ready;
+		wire valid_in;
+		wire aes_rst_n;
 
-// Instantiation of Axi Bus Interface S00_AXI
-	myip_test5_v1_0_S00_AXI # ( 
-		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
-		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
-	) myip_test5_v1_0_S00_AXI_inst (
-		.S_AXI_ACLK(s00_axi_aclk),
-		.S_AXI_ARESETN(s00_axi_aresetn),
-		.S_AXI_AWADDR(s00_axi_awaddr),
-		.S_AXI_AWPROT(s00_axi_awprot),
-		.S_AXI_AWVALID(s00_axi_awvalid),
-		.S_AXI_AWREADY(s00_axi_awready),
-		.S_AXI_WDATA(s00_axi_wdata),
-		.S_AXI_WSTRB(s00_axi_wstrb),
-		.S_AXI_WVALID(s00_axi_wvalid),
-		.S_AXI_WREADY(s00_axi_wready),
-		.S_AXI_BRESP(s00_axi_bresp),
-		.S_AXI_BVALID(s00_axi_bvalid),
-		.S_AXI_BREADY(s00_axi_bready),
-		.S_AXI_ARADDR(s00_axi_araddr),
-		.S_AXI_ARPROT(s00_axi_arprot),
-		.S_AXI_ARVALID(s00_axi_arvalid),
-		.S_AXI_ARREADY(s00_axi_arready),
-		.S_AXI_RDATA(s00_axi_rdata),
-		.S_AXI_RRESP(s00_axi_rresp),
-		.S_AXI_RVALID(s00_axi_rvalid),
-		.S_AXI_RREADY(s00_axi_rready),
-				 .data_in(data_in),
-		 .key_in(key_in),
-          .valid_in(valid_in),
-                .data_out(data_out),
-               .valid_out(valid_out)
+	 // Instantiation of Axi Bus Interface S00_AXI
+ 	myip_test5_v1_0_S00_AXI # ( 
+ 		.C_S_AXI_DATA_WIDTH(C_S00_AXI_DATA_WIDTH),
+ 		.C_S_AXI_ADDR_WIDTH(C_S00_AXI_ADDR_WIDTH)
+ 	) myip_test5_v1_0_S00_AXI_inst (
+ 		.S_AXI_ACLK(s00_axi_aclk),
+ 		.S_AXI_ARESETN(s00_axi_aresetn),
+ 		.S_AXI_AWADDR(s00_axi_awaddr),
+ 		.S_AXI_AWPROT(s00_axi_awprot),
+ 		.S_AXI_AWVALID(s00_axi_awvalid),
+ 		.S_AXI_AWREADY(s00_axi_awready),
+ 		.S_AXI_WDATA(s00_axi_wdata),
+ 		.S_AXI_WSTRB(s00_axi_wstrb),
+ 		.S_AXI_WVALID(s00_axi_wvalid),
+ 		.S_AXI_WREADY(s00_axi_wready),
+ 		.S_AXI_BRESP(s00_axi_bresp),
+ 		.S_AXI_BVALID(s00_axi_bvalid),
+ 		.S_AXI_BREADY(s00_axi_bready),
+ 		.S_AXI_ARADDR(s00_axi_araddr),
+ 		.S_AXI_ARPROT(s00_axi_awprot),
+ 		.S_AXI_ARVALID(s00_axi_arvalid),
+ 		.S_AXI_ARREADY(s00_axi_arready),
+ 		.S_AXI_RDATA(s00_axi_rdata),
+ 		.S_AXI_RRESP(s00_axi_rresp),
+ 		.S_AXI_RVALID(s00_axi_rvalid),
+ 		.S_AXI_RREADY(s00_axi_rready),
+ 				 .data_in(data_in),
+ 		 .key_in(key_in),
+            .valid_in(valid_in),
+                 .data_out(data_out),
+                .valid_out(valid_out),
+                .key_ready(key_ready),
+                .aes_rst_n(aes_rst_n)
 
-	);
+ 	);
 
-	// Add user logic here
-		 aes_top top(
-		 .data_in(data_in),
-		 .data_out(data_out),
-		 .key_in(key_in),
-		 .valid_in(valid_in),
-		 .valid_out(valid_out),
-		 .clk(s00_axi_aclk),
-		 .rst_n(s00_axi_aresetn)
-		 );
+ 	// Add user logic here
+ 		 aes_top top(
+ 		 .data_in(data_in),
+ 		 .data_out(data_out),
+ 		 .key_in(key_in),
+ 		 .valid_in(valid_in),
+ 		 .valid_out(valid_out),
+ 		 .clk(s00_axi_aclk),
+ 		 .rst_n(aes_rst_n),
+ 		 .key_ready(key_ready)
+ 		 );
 
-	// User logic ends
+ 	// User logic ends
 
 	endmodule

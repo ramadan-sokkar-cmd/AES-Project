@@ -1,10 +1,10 @@
-module aes_top(data_in,data_out,key_in,valid_in,valid_out,clk,rst_n);
+module aes_top(data_in,data_out,key_in,valid_in,valid_out,clk,rst_n,key_ready);
 input [127:0] data_in,key_in;
 input clk,rst_n,valid_in;
 // output reg [127:0] data_out;
 output wire [127:0] data_out;//new
 output wire valid_out;
-// output wire key_ready;//new
+output wire key_ready;//new
 
 
 wire [127:0] add_out,module1_out,module2_out,module3_out,module4_out,module5_out;
