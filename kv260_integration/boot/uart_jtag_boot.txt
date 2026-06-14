@@ -1,0 +1,46 @@
+
+==============================================
+  AES-128 Hardware Accelerator
+  Baremetal Test on ZynqMP (KV260)
+==============================================
+
+--- Phase 0: PL Configuration ---
+  Exception Level: EL3
+  FSBL boot: PL configured by boot image (FSBL+PMUFW 2025.2)
+  PL is powered, configured, and out of reset.
+  PL0_REF_CTRL = 0x01010A00 (CLKACT=1)
+
+  --- PL AXI Access Test ---
+  Read STATUS (0xA0000024)...
+  > BEFORE read
+  > AFTER read = 0x00000000
+
+--- Phase 1: Functional Correctness ---
+Holding AES core in reset...
+Loading AES-128 key...
+Releasing AES core from reset...
+Key expansion complete.
+
+  [PASS] NIST SP800-38A Block 1
+  [PASS] NIST SP800-38A Block 2
+  [PASS] NIST SP800-38A Block 3
+  [PASS] NIST SP800-38A Block 4
+  [PASS] FIPS-197 App B
+
+Functional Test: 5/5 passed
+
+--- Phase 2: Latency Measurement ---
+  Single-block latency: 49 ticks (490 ns @ 99MHz)
+
+--- Phase 3: Throughput Benchmark (1000 blocks) ---
+  Blocks encrypted: 1000
+  Total time:       9773 us
+  Time per block:   9670 ns
+  Throughput:       13 Mbps (103412 blocks/sec)
+
+==============================================
+  SUMMARY
+==============================================
+  Correctness: 5/5 passed
+  Latency:     490 ns/block
+==============================================

@@ -50,7 +50,9 @@ integer r;                    // Round index for packing
 ///////////////////////////////////////////////////////////////
 
 wire [127:0] sub_out;
-sub_bytes #(.USE_gf(0)) sub(.data_in({temp,96'b0}),.data_out(sub_out));
+wire [31:0] sub_in;
+assign sub_in = (i > 0) ? W[i-1] : 32'h0;
+sub_bytes #(.USE_gf(0)) sub(.data_in({sub_in,96'b0}),.data_out(sub_out));
 
 wire [31:0] g_out;
 

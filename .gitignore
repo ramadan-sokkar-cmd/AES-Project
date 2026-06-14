@@ -1,0 +1,62 @@
+# ============================================================================
+# .gitignore - AES-128 Hardware Accelerator Project
+# ============================================================================
+
+# ---- Vivado generated files ----
+*.jou
+*.log
+*.str
+*.bak
+*.wdb
+*.wpc
+*.cache/
+*.hw/
+*.ip_user_files/
+*.runs/
+*.sim/
+*.gen/
+*.tmp/
+/Xil/
+*.xpr.bak
+
+# ---- Vivado project directories (regenerated from Tcl) ----
+kv260_integration/vivado/aes_kv260/
+kv260_integration/vivado/aes_ip_pkg/
+kv260_integration/vivado/tmp/
+
+# ---- Vitis workspace and BSP (regenerated from Tcl) ----
+kv260_integration/sw_baremetal/workspace/
+
+# ---- Compiled binaries and ELF files ----
+*.elf
+*.o
+*.a
+*.vvp
+
+# ---- Bitstreams and boot images ----
+*.bit
+*.bin
+*.xsa
+*.bif.bak
+
+# ---- PetaLinux build artifacts ----
+project-spec/
+build/
+rootfs.ext3
+image.ub
+
+# ---- Temporary and debug files ----
+NUL
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# ---- Python cache ----
+__pycache__/
+*.pyc
+
+# ---- IDE files ----
+.vscode/
+.idea/
+*.swp
