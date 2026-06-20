@@ -20,7 +20,7 @@ assign K5_K6  = key_expanded[767:512];
 assign K7_K8  = key_expanded[511:256];
 assign K9_K10 = key_expanded[255:0];
 reg [4:0]   valid_pipe;
-wire key_ready;
+// wire key_ready;
 // reg valid_out_reg;//new
 
 
